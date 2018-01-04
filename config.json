@@ -1,0 +1,5 @@
+{
+    "serialNumber":"123",
+    "cpId":"CP25",
+    "csUrl":"ws://emobility-dev.uksouth.cloudapp.azure.com:9009/ocppj"
+}

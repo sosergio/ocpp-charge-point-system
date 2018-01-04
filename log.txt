@@ -1,0 +1,61 @@
+[2017-12-15T16:48:30.045Z] log initialized
+[2017-12-15T16:48:30.134Z] cp | started
+[2017-12-15T16:48:30.142Z] virtual-bob.handler | initialized
+[2017-12-15T16:48:30.143Z] websocket.handler | initialized
+[2017-12-15T16:48:30.209Z] websocket.handler | headers
+[2017-12-15T16:48:30.214Z] websocket.handler | open
+[2017-12-15T16:48:31.219Z] websocket.handler | send: [2,"1513356511219","BootNotification",{"chargePointVendor":"GIR-DBT","chargePointModel":"OCPP-ACDC","chargePointSerialNumber":"gir.vat.mx.000e48","chargeBoxSerialNumber":"gir.vat.mx.000e48","firmwareVersion":"1.0.49","iccid":"abc123","imsi":"abc123","meterType":"DBT NQC-ACDC","meterSerialNumber":"gir.vat.mx.000e48"}]
+[2017-12-15T16:48:31.249Z] websocket.handler | message: [3,"1513356511219",{"status":"Accepted","currentTime":"2017-12-15T16:48:31.268Z","interval":60}]
+[2017-12-15T16:48:31.249Z] hw.service | readConnectorStatus bobString:0,0,0
+[2017-12-15T16:48:31.249Z] websocket.handler | send: [2,"1513356511249","StatusNotification",{"connectorId":1,"errorCode":"","status":"Available","info":"","timestamp":"2017-12-15T16:48:31.249Z","vendorId":"","vendorErrorCode":""}]
+[2017-12-15T16:48:31.270Z] websocket.handler | message: [3,"1513356511249",{}]
+[2017-12-15T16:48:40.158Z] hw.service | setConnectorStatus: SuspendedEVSE
+[2017-12-15T16:48:40.158Z] hw.service | OnBobStringChangedCallback: 0,4,0
+[2017-12-15T16:48:40.159Z] websocket.handler | send: [2,"1513356520159","StatusNotification",{"connectorId":1,"errorCode":"","status":"SuspendedEVSE","info":"","timestamp":"2017-12-15T16:48:40.159Z","vendorId":"","vendorErrorCode":""}]
+[2017-12-15T16:48:40.172Z] websocket.handler | message: [3,"1513356520159",{}]
+[2017-12-15T16:48:40.275Z] hw.service | readMeterReading bobString:0,4,0
+[2017-12-15T16:48:40.276Z] websocket.handler | send: [2,"1513356520276","MeterValues",{"connectorId":1,"meterValue":[{"timestamp":"2017-12-15T16:48:40.276Z","sampledValue":[{"value":0,"unit":"Wh","measurand":"Energy.Active.Import.Register"}]}]}]
+[2017-12-15T16:48:40.291Z] websocket.handler | message: [3,"1513356520276",{"currentTime":"2017-12-15T16:48:40.312Z"}]
+[2017-12-15T16:48:50.155Z] hw.service | setConnectorStatus: Preparing
+[2017-12-15T16:48:50.155Z] hw.service | OnBobStringChangedCallback: 0,1,0
+[2017-12-15T16:48:50.155Z] websocket.handler | send: [2,"1513356530155","StatusNotification",{"connectorId":1,"errorCode":"","status":"Preparing","info":"","timestamp":"2017-12-15T16:48:50.155Z","vendorId":"","vendorErrorCode":""}]
+[2017-12-15T16:48:50.206Z] websocket.handler | message: [3,"1513356530155",{}]
+[2017-12-15T16:48:50.275Z] hw.service | readMeterReading bobString:0,1,0
+[2017-12-15T16:48:50.276Z] websocket.handler | send: [2,"1513356530276","MeterValues",{"connectorId":1,"meterValue":[{"timestamp":"2017-12-15T16:48:50.276Z","sampledValue":[{"value":0,"unit":"Wh","measurand":"Energy.Active.Import.Register"}]}]}]
+[2017-12-15T16:48:50.291Z] websocket.handler | message: [3,"1513356530276",{"currentTime":"2017-12-15T16:48:50.312Z"}]
+[2017-12-15T16:48:52.210Z] websocket.handler | message: [2,"1513356532231","RemoteStartTransaction",{"idTag":"1513356532224","connectorId":1,"chargingProfile":{"chargingProfileId":1,"transactionId":1513356532224,"stackLevel":1,"chargingProfilePurpose":"TxProfile","chargingProfileKind":"Relative","chargingSchedule":{"chargingRateUnit":"W","chargingSchedulePeriod":[{"startPeriod":1,"limit":7000}]}}}]
+[2017-12-15T16:48:52.211Z] websocket.handler | send: [3,"1513356532231",{"status":"Accepted"}]
+[2017-12-15T16:48:52.211Z] hw.service | readConnectorStatus bobString:0,1,0
+[2017-12-15T16:48:52.211Z] hw.service | readMeterReading bobString:0,1,0
+[2017-12-15T16:48:52.212Z] websocket.handler | send: [2,"1513356532212","StartTransaction",{"connectorId":1,"idTag":"1513356532224","meterStart":0,"reservationId":0,"timestamp":"2017-12-15T16:48:52.212Z"}]
+[2017-12-15T16:48:52.238Z] websocket.handler | message: [3,"1513356532212",{"idTagInfo":{"status":"Accepted","expiryDate":"2017-12-16T16:48:52.259Z","parentIdTag":"PARENT"},"transactionId":1513356532224}]
+[2017-12-15T16:48:52.239Z] hw.service | setConnectorStatus: Charging
+[2017-12-15T16:48:52.239Z] hw.service | OnBobStringChangedCallback: 0,2,0
+[2017-12-15T16:48:52.239Z] websocket.handler | send: [2,"1513356532239","StatusNotification",{"connectorId":1,"errorCode":"","status":"Charging","info":"","timestamp":"2017-12-15T16:48:52.239Z","vendorId":"","vendorErrorCode":""}]
+[2017-12-15T16:48:52.263Z] websocket.handler | message: [3,"1513356532239",{}]
+[2017-12-15T16:49:00.260Z] websocket.handler | send: [2,"1513356540259","Heartbeat","2017-12-15T16:49:00.259Z"]
+[2017-12-15T16:49:00.275Z] websocket.handler | message: [3,"1513356540259",{"currentTime":"2017-12-15T16:49:00.297Z"}]
+[2017-12-15T16:49:00.278Z] hw.service | readMeterReading bobString:0,2,8
+[2017-12-15T16:49:00.278Z] websocket.handler | send: [2,"1513356540278","MeterValues",{"connectorId":1,"transactionId":"1513356532224","meterValue":[{"timestamp":"2017-12-15T16:49:00.278Z","sampledValue":[{"value":8,"unit":"Wh","measurand":"Energy.Active.Import.Register"}]}]}]
+[2017-12-15T16:49:00.297Z] websocket.handler | message: [3,"1513356540278",{"currentTime":"2017-12-15T16:49:00.318Z"}]
+[2017-12-15T16:49:00.504Z] websocket.handler | message: [2,"1513356540525","RemoteStopTransaction",{"transactionId":1513356532224}]
+[2017-12-15T16:49:00.504Z] websocket.handler | send: [3,"1513356540525",{"status":"Accepted"}]
+[2017-12-15T16:49:00.504Z] hw.service | setConnectorStatus: Finishing
+[2017-12-15T16:49:00.505Z] hw.service | OnBobStringChangedCallback: 0,1,8
+[2017-12-15T16:49:00.505Z] websocket.handler | send: [2,"1513356540505","StatusNotification",{"connectorId":1,"errorCode":"","status":"Preparing","info":"","timestamp":"2017-12-15T16:49:00.505Z","vendorId":"","vendorErrorCode":""}]
+[2017-12-15T16:49:00.505Z] hw.service | readMeterReading bobString:0,1,8
+[2017-12-15T16:49:00.505Z] websocket.handler | send: [2,"1513356540505","StopTransaction",{"transactionId":"1513356532224","reason":"Remote","transactionData":[],"idTag":"1513356532224","timestamp":"2017-12-15T16:49:00.505Z","meterStop":8}]
+[2017-12-15T16:49:00.522Z] websocket.handler | message: [3,"1513356540505",{"idTagInfo":{"status":"Accepted","expiryDate":"2017-12-16T16:49:00.544Z","parentIdTag":"PARENT"}}]
+[2017-12-15T16:49:00.537Z] websocket.handler | message: [3,"1513356540505",{}]
+[2017-12-15T16:49:10.281Z] hw.service | readMeterReading bobString:0,1,17
+[2017-12-15T16:49:10.282Z] websocket.handler | send: [2,"1513356550281","MeterValues",{"connectorId":1,"transactionId":null,"meterValue":[{"timestamp":"2017-12-15T16:49:10.281Z","sampledValue":[{"value":17,"unit":"Wh","measurand":"Energy.Active.Import.Register"}]}]}]
+[2017-12-15T16:49:10.299Z] websocket.handler | message: [3,"1513356550281",{"currentTime":"2017-12-15T16:49:10.320Z"}]
+[2017-12-15T16:49:20.283Z] hw.service | readMeterReading bobString:0,1,27
+[2017-12-15T16:49:20.284Z] websocket.handler | send: [2,"1513356560284","MeterValues",{"connectorId":1,"transactionId":null,"meterValue":[{"timestamp":"2017-12-15T16:49:20.284Z","sampledValue":[{"value":27,"unit":"Wh","measurand":"Energy.Active.Import.Register"}]}]}]
+[2017-12-15T16:49:20.300Z] websocket.handler | message: [3,"1513356560284",{"currentTime":"2017-12-15T16:49:20.321Z"}]
+[2017-12-15T16:49:30.284Z] hw.service | readMeterReading bobString:0,1,37
+[2017-12-15T16:49:30.284Z] websocket.handler | send: [2,"1513356570284","MeterValues",{"connectorId":1,"transactionId":null,"meterValue":[{"timestamp":"2017-12-15T16:49:30.284Z","sampledValue":[{"value":37,"unit":"Wh","measurand":"Energy.Active.Import.Register"}]}]}]
+[2017-12-15T16:49:30.319Z] websocket.handler | message: [3,"1513356570284",{"currentTime":"2017-12-15T16:49:30.321Z"}]
+[2017-12-15T16:49:40.284Z] hw.service | readMeterReading bobString:0,1,47
+[2017-12-15T16:49:40.284Z] websocket.handler | send: [2,"1513356580284","MeterValues",{"connectorId":1,"transactionId":null,"meterValue":[{"timestamp":"2017-12-15T16:49:40.284Z","sampledValue":[{"value":47,"unit":"Wh","measurand":"Energy.Active.Import.Register"}]}]}]
+[2017-12-15T16:49:40.299Z] websocket.handler | message: [3,"1513356580284",{"currentTime":"2017-12-15T16:49:40.320Z"}]
